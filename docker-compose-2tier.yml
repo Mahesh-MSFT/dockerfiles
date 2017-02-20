@@ -1,0 +1,20 @@
+    version:'2'
+    
+    services:
+        shoppingcartweb:
+            image: maksh/aspnetcore2appimg:149
+            ports: 
+            - "8080:80"
+            networks: 
+            - "2t"
+        sqlinux:
+            image: maksh/snoopingshoppingcartdb
+            ports: 
+            - "1433:1433"
+            networks: 
+            - "2t"
+        networks:
+            2t:
+                external:
+                    name:2tier 
+

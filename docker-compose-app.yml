@@ -1,0 +1,5 @@
+    aspnetcoreappsvc2:
+        image: maksh/aspnetcore2appimg:149
+        ports: 
+        - "80:80"
+
